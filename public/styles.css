@@ -1,0 +1,130 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-color: #f0f4f8;
+}
+
+.container {
+    background-color: #fff;
+    padding: 2rem;
+    width: 100%;
+    max-width: 500px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    text-align: center;
+}
+
+h1 {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 1rem;
+}
+
+button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 0.6rem 1.2rem;
+    font-size: 1rem;
+    margin: 0.5rem;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+button:focus {
+    outline: none;
+}
+
+.instruction {
+    font-size: 1.1rem;
+    color: #555;
+    margin-top: 1rem;
+    margin-bottom: 0.5rem;
+}
+
+#word-to-guess {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 1.5rem;
+}
+
+#answer-options button {
+    background-color: #28a745;
+    color: white;
+    padding: 0.6rem 1.2rem;
+    font-size: 1rem;
+    margin: 0.5rem;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#answer-options button:hover {
+    background-color: #218838;
+}
+
+#scoreboard {
+    font-size: 1.1rem;
+    color: #333;
+    margin-top: 1.5rem;
+}
+
+#progress-bar {
+    width: 100%;
+    background-color: #e9ecef;
+    border-radius: 4px;
+    overflow: hidden;
+    margin-top: 1rem;
+    height: 10px;
+}
+
+#progress {
+    height: 100%;
+    width: 0;
+    background-color: #007bff;
+    transition: width 0.4s ease;
+}
+
+#result {
+    font-size: 1rem;
+    font-weight: bold;
+    color: #333;
+    margin-top: 1rem;
+}
+
+#confetti {
+    position: absolute;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+    width: 100%;
+    height: 100%;
+    z-index: 10;
+}
+
+.go-back-button {
+    background-color: #dc3545;
+    color: white;
+    font-size: 0.9rem;
+    margin-top: 1rem;
+}
+
+.go-back-button:hover {
+    background-color: #c82333;
+}

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spanish Vocabulary Game</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- Confetti CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>Spanish Vocabulary Game</h1>
+
+        <!-- Level Selection Screen -->
+        <div id="level-selection">
+            <p>Select your level:</p>
+            <button onclick="selectLevel('IB')" aria-label="Select IB level">IB Level</button>
+            <button onclick="selectLevel('IGCSE')" aria-label="Select IGCSE level">IGCSE Level</button>
+        </div>
+
+        <!-- Question Type Selection Screen -->
+        <div id="question-selection" style="display: none;">
+            <p>Select question type:</p>
+            <button onclick="startGame('translation')" aria-label="Start Vocabulary Translation game">Vocabulary Translation</button>
+            <button onclick="startGame('fillInTheBlank')" aria-label="Start Fill in the Blank game">Fill in the Blank</button>
+            <button onclick="startGame('sentenceTranslation')" aria-label="Start Sentence Translation game">Sentence Translation</button>
+            <button onclick="startGame('matching')" aria-label="Start Matching Words game">Matching Words</button>
+            <button onclick="startGame('verbConjugation')" aria-label="Start Verb Conjugation game">Verb Conjugation</button>
+            <button onclick="startGame('random')" aria-label="Start Random Question game">Random</button>
+            <button class="go-back-button" onclick="goBackToLevelSelection()" aria-label="Go back to level selection">Go Back</button>
+        </div>
+
+        <!-- Game Section -->
+        <div id="game" style="display: none;">
+            <div id="progress-bar">
+                <div id="progress"></div>
+            </div>
+            <p id="question-prompt" class="instruction"></p>
+            <h2 id="word-to-guess"></h2>
+
+            <!-- Multiple choice options instead of text input -->
+            <div id="answer-options">
+                <!-- Options will be dynamically added here -->
+            </div>
+
+            <p id="result"></p>
+            <button onclick="newQuestion()" class="new-word-button" aria-label="Get a new question">Next Question</button>
+            <button class="go-back-button" onclick="goBackToQuestionSelection()" aria-label="Go back to question selection">Go Back</button>
+            <div id="scoreboard">
+                <p>Score: <span id="score">0</span></p>
+            </div>
+        </div>
+
+        <!-- Confetti canvas, used for visual effect -->
+        <canvas id="confetti" style="position: absolute; top: 0; left: 0; pointer-events: none; width: 100%; height: 100%; z-index: 10;"></canvas>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
